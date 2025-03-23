@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="black" />
+    <title>The rePosit Blog</title>
+    <link rel="icon" href="Images/Train Logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Annapurna SIL"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Annapurna SIL";
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Use min-height instead of height for body to ensure it stretches */
+      }
+      header {
+        font-family: "Annapurna SIL";
+        background-color: #ffcc00;
+        color: #000000;
+        padding: 0px;
+        width: 100%; /* Ensure header spans full width */
+        height: 150px; /* Fixed height for the header */
+        box-sizing: border-box; /* Include padding in the height */
+        font-size: 2.5em; /* Set font size */
+        display: flex; /* Use Flexbox for layout */
+        align-items: center; /* Vertically center the content */
+        padding-left: 20px; /* Add padding to the left for the image */
+      }
+      .trainheader {
+        width: 190px;
+        height: auto;
+        margin-top: 20px;
+      }
+      .headerabout {
+        margin-left: 50px;
+        margin-top: 75px;
+      }
+      .container {
+        display: flex;
+        flex: 1;
+      }
+      .navigation {
+        flex: 0 0 200px; /* Fixed width for navigation pane */
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .navTitle {
+        font-size: 2.5em;
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+      .navigation ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0;
+      }
+      .navigation ul li {
+        margin-bottom: 10px; /* Add spacing between list items */
+      }
+      .content {
+        flex: 1;
+        display: flex; /* Ensure content and its children are flex containers */
+        flex-direction: column; /* Stack children vertically */
+        padding: 20px;
+      }
+      .contenttitle {
+        font-size: 2.5em;
+        margin-top: 0px;
+      }
+      .namedate {
+        display: flex;
+        flex-direction: row;
+      }
+      .posts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .perpost {
+        flex: 0 0 calc(33.33% - 10px);
+        margin-right: 5px;
+        margin-bottom: 10px;
+      }
+      .blogtitle {
+        font-size: 1.25em;
+      }
+      .author {
+        margin-right: 5px;
+      }
+      .postdate {
+        font-style: italic;
+      }
+      .links {
+        display: flex;
+        flex-direction: row; /* Stack links vertically */
+        color: black;
+      }
+      a:visited,
+      a[href^="mailto:"],
+      a[href$=".pdf"] {
+        color: inherit; /* Use the same color as the parent element */
+      }
+      .links a {
+        margin-right: 10px; /* Add margin between links */
+      }
+      .footer {
+        color: gray;
+        text-align: right;
+        margin-right: 5px;
+      }
+      /* Add any other styles as needed */
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Switch to column layout for smaller screens */
+        }
+        .navigation {
+          flex: none;
+          width: 100%; /* Allow navigation to take full width */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="Images/All Logo-5.png" class="trainheader" />
+      <h1 class="headerabout">The rePosit Blog</h1>
+    </header>
+    <div class="container">
+      <nav class="navigation">
+        <h2 class="navTitle">Navigation</h2>
+        <ul>
+          <li><a href="home.html">Homepage</a></li>
+          <li><a href="#">Blog Posts</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <!-- Add more links as needed -->
+        </ul>
+      </nav>
+      <div class="content">
+        <h2>
+          A blog by Peter Silverstein focusing on an interdisciplinary approach
+          to climate solutions. Peter draws primarily on public policy and
+          consumer psychology to investigate consumer-centric approaches to
+          consumption reduction and climate change mitigation.
+        </h2>
+        <h2 class="contenttitle">Recent Posts</h2>
+        <div class="posts">
+          <div class="perpost">
+            <a href="#" target="_blank" class="blogtitle"
+              >Blog Posting: A Philosophical Approach</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">10/15/2023</h4>
+            </div>
+            <p>
+              This is an example abstract. Each abstract should be relatively
+              short but clearly explain the purpose of the blog post and also
+              provide a hook. The most important part of the abstract is to
+              compel the reader to click on and read the blog post.
+            </p>
+          </div>
+          <div class="perpost">
+            <a href="#" target="_blank" class="blogtitle"
+              >Blog Posting: A Technical Approach</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">09/02/2023</h4>
+            </div>
+            <p>
+              This is an example abstract. Each abstract should be relatively
+              short but clearly explain the purpose of the blog post and also
+              provide a hook. The most important part of the abstract is to
+              compel the reader to click on and read the blog post.
+            </p>
+          </div>
+          <div class="perpost">
+            <a href="#" target="_blank" class="blogtitle"
+              >Technical Posting: A Blog-Focused Approach</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">07/01/2023</h4>
+            </div>
+            <p>
+              This is an example abstract. Each abstract should be relatively
+              short but clearly explain the purpose of the blog post and also
+              provide a hook. The most important part of the abstract is to
+              compel the reader to click on and read the blog post.
+            </p>
+          </div>
+          <div class="perpost">
+            <a href="#" target="_blank" class="blogtitle"
+              >Technical Posting: A Blog-Focused Approach</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">06/14/2023</h4>
+            </div>
+            <p>
+              This is an example abstract. Each abstract should be relatively
+              short but clearly explain the purpose of the blog post and also
+              provide a hook. The most important part of the abstract is to
+              compel the reader to click on and read the blog post.
+            </p>
+          </div>
+        </div>
+        <div class="footer">© Peter Silverstein 2024</div>
+      </div>
+    </div>
+  </body>
+</html>
