@@ -1,26 +1,38 @@
 [
   {
+    "title": "Modeling the Effect of the RapidRide Program on Bus Reliability in Seattle, WA, Using Regression and Bayesian Additive Regression Trees",
+    "url": "Portfolio/thesis/qmss-thesis-final.pdf",
+    "date": "06/04/2025",
+    "description": "Full text of my master's thesis for QMSS, a project focused on using causal inference and machine learning to asses whether a bus upgrade policy in Seattle, WA, was worthwhile."
+  },
+  {
+    "title": "Exploring the Relationship between Trifectas in State Governments and Spending on Education using Multilevel Modeling",
+    "url": "Portfolio/educ-spending-project/educspending-blogpost.html",
+    "date": "06/04/2025",
+    "description": "Final project for Topics in Modeling course taught by Dr. Andrew Gelman"
+  },
+  {
     "title": "Redacted: Exploring Censorship in Modern America",
     "url": "https://censorship.streamlit.app",
     "date": "05/01/2025",
     "description": "Streamlit-powered website containing data visualizations about censorship in the modern United States. Completed as part of the final project for QMSS Data Visualization course @ Columbia University."
   },
   {
-    "title": "QMSS: Data Visualization Homework 3",
+    "title": "Text and Network Visualization with ArXiv Papers",
     "url": "Portfolio/data-viz-assignment3/assignment3.html",
     "date": "03/23/2025",
-    "description": "Data visualization homework from Quantitative Methods in the Social Sciences master's program."
+    "description": "Using text analysis and network visualizations to explore trends and patterns within a dataset of ArXiv papers. Done for QMSS Data Visualization course."
   },
   {
-    "title": "QMSS: Data Visualization Homework 2",
+    "title": "Visualizing and Exploring NYC Parking Violation Data",
     "url": "Portfolio/data-viz-assignment2/assignment2.html",
     "date": "03/23/2025",
-    "description": "Another data visualization homework assignment."
+    "description": "Using data visualization with a focus on geographic data and mapping to explore NYC Parking Violation data. Done for QMSS Data Visualization course."
   },
   {
-    "title": "QMSS: Data Visualization Homework 1",
+    "title": "Visualizing the ‘How Couples Meet and Stay Together’ Survey by Rosenfeld et al, 2018",
     "url": "Portfolio/data-viz-assignment1/assignment1.html",
     "date": "03/23/2025",
-    "description": "Another data visualization homework assignment."
+    "description": "Applying data visualization foundational principles on HCMST dataset. Done for QMSS Data Visualization course."
   }
 ]

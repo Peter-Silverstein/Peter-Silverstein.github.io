@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="black" />
+    <title>Bus Reliability Modeling</title>
+    <link rel="icon" href="Images/Train Logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <img src="Images/All Logo-5.png" class="trainheader" />
+      <h1 class="headerabout">Bus Reliability Modeling</h1>
+    </header>
+    <div class="container">
+      <nav class="navigation" id="main-nav"></nav>
+      <script>
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('main-nav').innerHTML = html;
+          });
+      </script>
+      </nav>
+      <div class="contentthesis-layout">
+        <div class="contentthesis">
+            <h2>
+                Modeling the Effect of the RapidRide Program on Bus Reliability in Seattle, WA
+            </h2>
+            <p>
+            My master's thesis for the QMSS program was a study of whether a bus upgrade program (RapidRide) in Seattle, WA, was effective at improving reliability on the routes that it upgraded.
+            This question is pertinent because no such analysis previously existed (as far as I can tell, King County Metro primarily uses 'percentage of trips on-time' as the KPI for
+            bus reliability performance). My analysis used traditional regression approaches as well as Bayesian Additive Regression Trees (BARTs), a machine learning approach, to estimate
+            a treatment effect, in seconds, of applying the RapidRide upgrade to a bus route. This page is dedicated to that project--in addition to posting the final thesis paper, I intend to 
+            periodically add supplemental materials that outline parts of the process that did not make it into the final paper.
+            </p>
+            <p>
+            I began the project by collecting real-time arrival data for RapidRide and non-RapidRide bus stops across the city. I achieved this by writing a Python script that requested real-time
+            General Transit Specification Feed (GTFS) data from the city and stored it in a JSON format. I then automated this process to run every 15 minutes with AWS Lambda and stored the
+            resulting JSON files to an S3 Storage Bucket, which I then periodically downloaded to my local machine and stored in a PostgreSQL database. The data cleaning process involved adding
+            scheduled arrival times (to calculate how much a bus deviated from its scheduled arrival time) and adding pretreatment covariates for use as adjustment variables in my final models.
+            One aspect of the pretreatment covariate process that I'm particularly pleased with is how I used GIS in R to associate census block group data with the geographic shape of each bus
+            route. For model fitting computational reasons, I took a sample of 100k observations for use in my training/test datasets.
+            </p>
+            <p>
+            I then fit some multivariate linear models using the `rstanarm` package in R, using a RapidRide indicator variable as my treatment variable. In order to potentially capture more
+            complex interaction effects and nonlinear relationships without dealing with inflated standard errors, I also fit a BART model. For the BART modeling, I used Google Vertex AI for
+            virtual machine access since my local machine was a bit underpowered for the task. This involved using a custom Dockerfile along with my R script to properly set up the virtual 
+            machine to do my work. Finally, I used the models to calculate factual and counterfactual estimates of reliability and compared the two for my final treatment effect. The 
+            benefit of using `rstanarm` and BARTs was that I got Bayesian posterior distributions for the effect, which gave me a better picture of the effect, generally speaking. The analysis
+            showed that the RapidRide upgrade did improve reliability, though the mean estimates for this effect varied between ~10 seconds for the linear models and ~45 seconds for the BART
+            model.
+            </p>
+            <p>
+            In addition to the final paper submission, I presented this as a 3-minute talk to a general audience as part of the GSAS SynThesis Competition. Out of 12 finalists, I placed in 
+            3rd! To the right, you'll find links to the final paper, the talk on YouTube, my GitHub repo for the project, as well as any future content that I publish related to the process
+            or analysis.
+            </p>
+            <div class="footer">© Peter Silverstein 2025</div>
+        </div>
+        <aside class="projectlinks">
+            </h2>
+                <h2>Project Links</h2>
+                <ul>
+                    <li><a href="Portfolio/thesis/qmss-thesis-final.pdf"  target="_blank">Full Final Paper</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Teqo7Ayat0s"  target="_blank">GSAS SynThesis Presentation</a></li>
+                    <li><a href="https://github.com/Peter-Silverstein/bus-delay-modeling"  target="_blank">GitHub Repository</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

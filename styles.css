@@ -57,6 +57,7 @@ body {
       .contenttitle {
         font-size: 2.5em;
         margin-top: 0px;
+        margin-bottom: 5px;
       }
       .namedate {
         display: flex;
@@ -68,18 +69,32 @@ body {
         flex-wrap: wrap;
       }
       .perpost {
-        flex: 0 0 calc(33.33% - 10px);
+        flex: 0 0 calc(90% - 10px);
         margin-right: 5px;
         margin-bottom: 10px;
       }
       .blogtitle {
-        font-size: 1.25em;
+        font-size: 1.5em;
       }
       .author {
         margin-right: 5px;
       }
       .postdate {
         font-style: italic;
+      }
+      .namedate {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2px; /* Adjust as needed for tightness */
+      }
+      .author,
+      .postdate {
+        margin: 1px;
+        font-size: 1em; /* Optional: make date/author less prominent */
+        font-weight: bold; /* Optional: make headings look like normal text */
+      }
+      .perpost p {
+        margin-top: 2px; /* Reduce space above description */
       }
       .links {
         display: flex;
@@ -99,7 +114,7 @@ body {
         text-align: right;
         margin-right: 5px;
       }
-           .bio {
+        .bio {
         flex: 1;
         display: flex; /* Ensure content and its children are flex containers */
         flex-direction: column; /* Stack children vertically */
@@ -151,3 +166,63 @@ body {
           width: 100%; /* Allow navigation to take full width */
         }
       }
+      .contentthesis {
+        flex: 1;
+        display: flex; /* Ensure content and its children are flex containers */
+        flex-direction: column; /* Stack children vertically */
+        padding: 10px;
+      }
+      .contentthesis h2 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .contentthesis p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .contentthesis ul {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding-left: 1.2em; /* Keep some indent for the list */
+      }
+
+      .contentthesis li {
+        margin-bottom: 0.3em;
+      }
+      .contentthesis-layout {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem; /* space between columns */
+        width: 100%;
+      }
+
+      .contentthesis {
+        flex: 1 1 65%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        min-width: 0;
+      }
+
+      .projectlinks {
+        flex: 0 0 20%; /* Fixed width for navigation pane */
+        background-color: #f4f4f4;
+        padding: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .contentthesis-layout {
+          flex-direction: column;
+        }
+        .projectlinks {
+          width: 100%;
+          max-width: none;
+          min-width: 0;
+          margin-top: 2rem;
+          position: static;
+        }
+      }
+
+
