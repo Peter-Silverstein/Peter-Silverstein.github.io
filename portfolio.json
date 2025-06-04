@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Redacted: Exploring Censorship in Modern America",
+    "url": "https://censorship.streamlit.app",
+    "date": "05/01/2025",
+    "description": "Streamlit-powered website containing data visualizations about censorship in the modern United States. Completed as part of the final project for QMSS Data Visualization course @ Columbia University."
+  },
+  {
+    "title": "QMSS: Data Visualization Homework 3",
+    "url": "Portfolio/data-viz-assignment3/assignment3.html",
+    "date": "03/23/2025",
+    "description": "Data visualization homework from Quantitative Methods in the Social Sciences master's program."
+  },
+  {
+    "title": "QMSS: Data Visualization Homework 2",
+    "url": "Portfolio/data-viz-assignment2/assignment2.html",
+    "date": "03/23/2025",
+    "description": "Another data visualization homework assignment."
+  },
+  {
+    "title": "QMSS: Data Visualization Homework 1",
+    "url": "Portfolio/data-viz-assignment1/assignment1.html",
+    "date": "03/23/2025",
+    "description": "Another data visualization homework assignment."
+  }
+]

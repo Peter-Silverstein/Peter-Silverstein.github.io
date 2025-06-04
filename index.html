@@ -6,123 +6,8 @@
     <meta name="theme-color" content="black" />
     <title>Functions of Density</title>
     <link rel="icon" href="Images/Train Logo.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Annapurna SIL"
-    />
-    <style>
-      body {
-        margin: 0;
-        font-family: "Annapurna SIL";
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Use min-height instead of height for body to ensure it stretches */
-      }
-      header {
-        font-family: "Annapurna SIL";
-        background-color: #ffcc00;
-        color: #000000;
-        padding: 0px;
-        width: 100%; /* Ensure header spans full width */
-        height: 150px; /* Fixed height for the header */
-        box-sizing: border-box; /* Include padding in the height */
-        font-size: 2.5em; /* Set font size */
-        display: flex; /* Use Flexbox for layout */
-        align-items: center; /* Vertically center the content */
-        padding-left: 20px; /* Add padding to the left for the image */
-      }
-      .trainheader {
-        width: 190px;
-        height: auto;
-        margin-top: 20px;
-      }
-      .headerabout {
-        margin-left: 50px;
-        margin-top: 75px;
-      }
-      .container {
-        display: flex;
-        flex: 1;
-      }
-      .navigation {
-        flex: 0 0 200px; /* Fixed width for navigation pane */
-        background-color: #f4f4f4;
-        padding: 20px;
-      }
-      .navTitle {
-        font-size: 2.5em;
-        margin-left: 0px;
-        margin-top: 0px;
-      }
-      .navigation ul {
-        list-style: none; /* Remove default list styles */
-        padding: 0;
-      }
-      .navigation ul li {
-        margin-bottom: 10px; /* Add spacing between list items */
-      }
-      .content {
-        flex: 1;
-        display: flex; /* Ensure content and its children are flex containers */
-        flex-direction: column; /* Stack children vertically */
-        padding: 20px;
-      }
-      .contenttitle {
-        font-size: 2.5em;
-        margin-top: 0px;
-      }
-      .namedate {
-        display: flex;
-        flex-direction: row;
-      }
-      .posts {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .perpost {
-        flex: 0 0 calc(33.33% - 10px);
-        margin-right: 5px;
-        margin-bottom: 10px;
-      }
-      .blogtitle {
-        font-size: 1.25em;
-      }
-      .author {
-        margin-right: 5px;
-      }
-      .postdate {
-        font-style: italic;
-      }
-      .links {
-        display: flex;
-        flex-direction: row; /* Stack links vertically */
-        color: black;
-      }
-      a:visited,
-      a[href^="mailto:"],
-      a[href$=".pdf"] {
-        color: inherit; /* Use the same color as the parent element */
-      }
-      .links a {
-        margin-right: 10px; /* Add margin between links */
-      }
-      .footer {
-        color: gray;
-        text-align: right;
-        margin-right: 5px;
-      }
-      /* Add any other styles as needed */
-      @media screen and (max-width: 768px) {
-        .container {
-          flex-direction: column; /* Switch to column layout for smaller screens */
-        }
-        .navigation {
-          flex: none;
-          width: 100%; /* Allow navigation to take full width */
-        }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
@@ -130,14 +15,14 @@
       <h1 class="headerabout">Functions of Density</h1>
     </header>
     <div class="container">
-      <nav class="navigation">
-        <h2 class="navTitle">Navigation</h2>
-        <ul>
-          <li><a href="index.html">Homepage</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <!-- Add more links as needed -->
-        </ul>
+      <nav class="navigation" id="main-nav"></nav>
+      <script>
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('main-nav').innerHTML = html;
+          });
+      </script>
       </nav>
       <div class="content">
         <h2>
@@ -164,7 +49,7 @@
           <!-- End Single Post -->
           <!-- Begin Single Post -->
           <div class="perpost">
-            <a href="Portfolio/data-viz-assignment1/assignment1_graded.html" target="_blank" class="blogtitle"
+            <a href="Portfolio/data-viz-assignment1/assignment1.html" target="_blank" class="blogtitle"
               >QMSS: Data Visualization Homework 1</a
             >
             <div class="namedate">
@@ -174,6 +59,34 @@
             <p>
               Data visualization homework from Quantitative Methods in the Social Sciences master's program. This assignment focused
               on visually understanding the "How Couples Meet and Stay Together" survey from Stanford (Rosenfeld et al, 2018).
+            </p>
+          </div>
+          <!-- End Single Post -->
+          <!-- Begin Single Post -->
+          <div class="perpost">
+            <a href="Portfolio/data-viz-assignment2/assignment2.html" target="_blank" class="blogtitle"
+              >QMSS: Data Visualization Homework 2</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">03/23/2025</h4>
+            </div>
+            <p>
+              Data visualization homework from Quantitative Methods in the Social Sciences master's program. 
+            </p>
+          </div>
+          <!-- End Single Post -->
+          <!-- Begin Single Post -->
+          <div class="perpost">
+            <a href="Portfolio/data-viz-assignment3/assignment3.html" target="_blank" class="blogtitle"
+              >QMSS: Data Visualization Homework 3</a
+            >
+            <div class="namedate">
+              <h4 class="author">Peter Silverstein,</h4>
+              <h4 class="postdate">03/23/2025</h4>
+            </div>
+            <p>
+              Data visualization homework from Quantitative Methods in the Social Sciences master's program.
             </p>
           </div>
           <!-- End Single Post -->

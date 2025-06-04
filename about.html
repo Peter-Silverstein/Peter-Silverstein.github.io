@@ -6,119 +6,8 @@
     <meta name="theme-color" content="black" />
     <title>Functions of Density - About Me</title>
     <link rel="icon" href="Images/Train Logo.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Annapurna SIL"
-    />
-    <style>
-      body {
-        margin: 0;
-        font-family: "Annapurna SIL";
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Use min-height instead of height for body to ensure it stretches */
-      }
-      header {
-        font-family: "Annapurna SIL";
-        background-color: #ffcc00;
-        color: #000000;
-        padding: 0px;
-        width: 100%; /* Ensure header spans full width */
-        height: 150px; /* Fixed height for the header */
-        box-sizing: border-box; /* Include padding in the height */
-        font-size: 2.5em; /* Set font size */
-        display: flex; /* Use Flexbox for layout */
-        align-items: center; /* Vertically center the content */
-        padding-left: 20px; /* Add padding to the left for the image */
-      }
-      .trainheader {
-        width: 190px;
-        height: auto;
-        margin-top: 20px;
-      }
-      .headerabout {
-        margin-left: 50px;
-        margin-top: 75px;
-      }
-      .container {
-        display: flex;
-        flex: 1;
-      }
-      .navigation {
-        flex: 0 0 200px; /* Fixed width for navigation pane */
-        background-color: #f4f4f4;
-        padding: 20px;
-      }
-      .navTitle {
-        font-size: 2.5em;
-        margin-left: 0px;
-        margin-top: 0px;
-      }
-      .navigation ul {
-        list-style: none; /* Remove default list styles */
-        padding: 0;
-      }
-      .navigation ul li {
-        margin-bottom: 10px; /* Add spacing between list items */
-      }
-      .bio {
-        flex: 1;
-        display: flex; /* Ensure content and its children are flex containers */
-        flex-direction: column; /* Stack children vertically */
-      }
-      .currentheadshot {
-        width: 100px;
-        border-radius: 50%;
-        margin-right: 20px;
-        margin-top: 20px;
-        margin-left: 30px;
-      }
-      .namephoto {
-        display: flex;
-        flex-direction: row;
-      }
-      .nameplus {
-        display: flex;
-        flex-direction: column;
-      }
-      .name {
-        font-size: 2.5em;
-        margin-bottom: 0px;
-      }
-      .links {
-        display: flex;
-        flex-direction: row; /* Stack links vertically */
-        color: black;
-      }
-      a:visited,
-      a[href^="mailto:"],
-      a[href$=".pdf"] {
-        color: inherit; /* Use the same color as the parent element */
-      }
-      .links a {
-        margin-right: 10px; /* Add margin between links */
-      }
-      .aboutme {
-        margin-left: 30px;
-        flex-direction: column;
-        max-width: 90%;
-      }
-      .footer {
-        color: gray;
-        text-align: right;
-        margin-right: 5px;
-      }
-      /* Add any other styles as needed */
-      @media screen and (max-width: 768px) {
-        .container {
-          flex-direction: column; /* Switch to column layout for smaller screens */
-        }
-        .navigation {
-          flex: none;
-          width: 100%; /* Allow navigation to take full width */
-        }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
@@ -126,14 +15,14 @@
       <h1 class="headerabout">About Me</h1>
     </header>
     <div class="container">
-      <nav class="navigation">
-        <h2 class="navTitle">Navigation</h2>
-        <ul>
-          <li><a href="index.html">Homepage</a></li>
-          <li><a href="projects.html">Blog Posts</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <!-- Add more links as needed -->
-        </ul>
+      <nav class="navigation" id="main-nav"></nav>
+      <script>
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('main-nav').innerHTML = html;
+          });
+      </script>
       </nav>
       <div class="content">
         <div class="namephoto">

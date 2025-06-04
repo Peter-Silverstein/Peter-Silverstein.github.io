@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="black" />
+    <title>Functions of Density - Project Portfolio</title>
+    <link rel="icon" href="Images/Train Logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <img src="Images/All Logo-5.png" class="trainheader" />
+      <h1 class="headerabout">Project Portfolio</h1>
+    </header>
+    <div class="container">
+      <nav class="navigation" id="main-nav"></nav>
+      <script>
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('main-nav').innerHTML = html;
+          });
+      </script>
+      </nav>
+      <div class="content">
+        <h2 class="contenttitle">All Projects</h2>
+          <div class = "posts" id="project-list"></div>
+          <script>
+          fetch('portfolio.json')
+            .then(response => response.json())
+            .then(projects => {
+              const container = document.getElementById('project-list');
+              projects.forEach(project => {
+                // Create the perpost container
+                const div = document.createElement('div');
+                div.className = 'perpost';
+
+                // Create the project title link
+                const a = document.createElement('a');
+                a.href = project.url;
+                a.target = '_blank';
+                a.className = 'blogtitle';
+                a.textContent = project.title;
+
+                // Create the name/date row
+                const namedate = document.createElement('div');
+                namedate.className = 'namedate';
+
+                const author = document.createElement('h4');
+                author.className = 'author';
+                author.textContent = 'Peter Silverstein,';
+
+                const postdate = document.createElement('h4');
+                postdate.className = 'postdate';
+                postdate.textContent = project.date;
+
+                namedate.appendChild(author);
+                namedate.appendChild(postdate);
+
+                // Create the description
+                const desc = document.createElement('p');
+                desc.textContent = project.description;
+
+                // Assemble the post
+                div.appendChild(a);
+                div.appendChild(namedate);
+                div.appendChild(desc);
+
+                // Add to the container
+                container.appendChild(div);
+              });
+            });
+          </script>
+        <div class="footer">© Peter Silverstein 2025</div>
+      </div>
+    </div>
+  </body>
+</html>
