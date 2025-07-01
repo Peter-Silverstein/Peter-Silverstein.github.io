@@ -1,8 +1,8 @@
 [
   {
-    "title": "Projects coming soon!",
-    "url": "",
-    "date": "",
-    "description": "I'm currently working on some sports-related projects and other personal passion projects."
+    "title": "2025 Cereal Trends Report",
+    "url": "https://cerealtrends2025.streamlit.app",
+    "date": "07/01/2025",
+    "description": "A simple data analysis project hosted on Streamlit. I used data on cereal box weights collected semiweekly in my house to get some insights on the way the family consumes cereal. It's a bit of a joke project."
   }
 ]
