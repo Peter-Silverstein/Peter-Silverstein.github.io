@@ -1,5 +1,11 @@
 [
   {
+    "title": "Spatio-Temporal Modeling of NYC Collision Data, with Difference-in-Difference for Causal Inference",
+    "url": "Portfolio/nyc-collisions/nyc-collisions-causalmodeling.html",
+    "date": "07/09/2025",
+    "description": "I use Stan to combine BYM2 modeling with temporal hierarchy and a DiD term to estimate a causal effect of congestion pricing on collisions. This takes place in a Bayesian workflow setting."
+  },
+  {
     "title": "Implementing Stan BYM2 and ICAR Models to Spatially Model Traffic Collisions in NYC",
     "url": "Portfolio/nyc-collisions/nyc-collisions-modeling.html",
     "date": "06/24/2025",
